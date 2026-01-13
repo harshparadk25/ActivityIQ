@@ -1,0 +1,16 @@
+date,task,user,timeSpent,status
+2025-01-01,Design UI,Harsh,3,completed
+2025-01-01,Fix Login Bug,Harsh,2,completed
+2025-01-01,Write API Docs,Harsh,1,pending
+2025-01-02,Build Upload API,Harsh,4,completed
+2025-01-02,Test CSV Parsing,Harsh,2,completed
+2025-01-03,Create Dashboard UI,Harsh,3,pending
+2025-01-03,Fix Chart Bug,Harsh,1,completed
+2025-01-04,Refactor Backend,Harsh,2,completed
+2025-01-04,Optimize Queries,Harsh,3,completed
+2025-01-05,Write README,Harsh,2,pending
+2025-01-06,Add Notes Feature,Harsh,3,completed
+2025-01-07,Deploy Backend,Harsh,4,completed
+2025-01-07,Deploy Frontend,Harsh,3,pending
+2025-01-08,Final Testing,Harsh,2,completed
+2025-01-09,Interview Prep,Harsh,1,completed
