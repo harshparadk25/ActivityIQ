@@ -12,15 +12,15 @@ export const ingestExternalData = async (req, res) => {
     }
 
     
-    const uploadId = crypto.randomUUID();
+    const uploadId = "external-api";
 
-    
-    const result = await ingestRows({
-      rows,
-      uploadId,
-      fileHash: "external-api",
-      sourceFile: "external-api"
-    });
+const result = await ingestRows({
+  rows,
+  uploadId,
+  fileHash: "external-api",
+  sourceFile: "external-api"
+});
+
 
     
     res.json({
