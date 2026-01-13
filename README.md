@@ -51,6 +51,7 @@ ActivityIQ is an internal analytics tool built to analyze activity data from CSV
 ```
 /controllers
   ├── uploadController.js
+  ├── externalController.js
   ├── analyticsController.js
   └── externalIngestController.js
 
@@ -63,7 +64,8 @@ ActivityIQ is an internal analytics tool built to analyze activity data from CSV
 
 /routes
   ├── uploadRoutes.js
-  └── externalIngestRoute.js
+  ├── analytics.js
+  └── recordRoute.js
 ```
 
 ### Frontend
@@ -72,7 +74,9 @@ ActivityIQ is an internal analytics tool built to analyze activity data from CSV
 /src
   ├── pages
   │   ├── Upload.jsx
+      ├── Processing.jsx
   │   └── Dashboard.jsx
+  
   ├── components/dashboard
   ├── api
   │   ├── upload.js
