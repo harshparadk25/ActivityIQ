@@ -1,0 +1,53 @@
+ActivityIQ – Project Reflection
+
+1. Difficulties Faced
+
+During the development of ActivityIQ, the main challenge was designing a system that could
+handle CSV files with dynamic and unknown column structures. Since the application is not
+restricted to a fixed schema, parsing, validating, and storing flexible data in MongoDB
+required careful design.
+
+Another major challenge was implementing the “smart merge” functionality. The goal was to
+ensure that re-uploading the same or similar CSV file does not create duplicate records,
+while also preserving user-added notes. This required hashing and normalization of rows
+and checking for existing records efficiently.
+
+Generating analytics dynamically was also challenging, because the system had to detect
+date and time-related columns automatically instead of relying on fixed column names.
+
+Deployment was another difficulty, especially dealing with CORS issues between Vercel
+(frontend) and Render (backend), and handling Render’s cold start behavior which causes
+the first request to take longer.
+
+2. Debugging Approach
+
+My debugging approach was systematic and step-by-step. I first verified each API endpoint
+independently using the browser and Postman before integrating it with the frontend.
+
+For ingestion issues, I used console logs and tested the pipeline in stages:
+CSV parsing → data cleaning → hashing → database insert/update.
+
+For frontend-backend communication problems (CORS, timeouts), I used the browser Network
+tab to inspect request and response headers and error messages.
+
+For deployment issues, I relied on Render logs and gradually fixed environment variables,
+CORS configuration, and server binding issues.
+
+Whenever something failed, I tried to isolate whether the problem was in the frontend,
+backend, database, or deployment configuration before changing code.
+
+3. Improvements If Given More Time
+
+If I had more time, I would implement the following improvements:
+
+- Add user authentication and user-specific datasets
+- Add export functionality (download analytics as PDF or CSV)
+- Add background job processing for very large CSV files
+- Add dataset versioning and history tracking
+- Improve analytics with more charts and advanced metrics
+- Add role-based access (admin / user)
+- Add automated test cases for ingestion and analytics
+
+Overall, this project helped me understand real-world backend data ingestion, data cleaning,
+API design, frontend-backend integration, and deployment challenges. It was a very practical
+learning experience that closely resembles real production systems.
